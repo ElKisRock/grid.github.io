@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Areas</title>
+    <style>
+        .grid-container {
+            background-color: rebeccapurple;
+            width: 100%;
+            min-height: 700px;
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "contenido1 contenido1 aside"
+                "contenido2 contenido3 aside"
+                "footer footer footer";
+        }
+
+        .item1 {
+            grid-area: header;
+            background-color: purple;
+        }
+
+        .item2 {
+            grid-area: nav;
+            background-color: crimson;
+        }
+
+        .item3 {
+            grid-area: contenido1;
+            background-color: violet;
+        }
+
+        .item4 {
+            grid-area: aside;
+            background-color: purple;
+        }
+
+        .item5 {
+            grid-area: footer;
+            background-color: darkred;
+        }
+
+        .item6 {
+            grid-area: contenido2;
+            background-color: orange;
+        }
+
+        .item7 {
+            grid-area: contenido3;
+            background-color: gold;
+        }
+
+        .grid-item {
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media (max-width: 720px) {
+            .grid-container {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "contenido1"
+                    "contenido2"
+                    "contenido3"
+                    "aside"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="grid-container">
+        <div class="grid-item item1">header</div>
+        <div class="grid-item item2">nav</div>
+        <div class="grid-item item3">contenido 1</div>
+        <div class="grid-item item6">contenido 2</div>
+        <div class="grid-item item7">contenido 3</div>
+        <div class="grid-item item4">aside</div>
+        <div class="grid-item item5">footer</div>
+        <a href="index2.html" style="display: block; text-align: center; margin-top: 20px; font-weight: bold; text-decoration: none; color: white; background-color: black; padding: 10px; border-radius: 5px;">
+            Versión con columnas y filas
+          </a>
+    </section>
+</body>
+
+</html>
